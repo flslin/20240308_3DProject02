@@ -71,5 +71,10 @@ public class SphereController : MonoBehaviour
             rotation += new Vector3(0, 0, 90) * Time.deltaTime;
             transform.eulerAngles = rotation; // 오일러 각(절대 각도)에 회전값 초기화
         }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.localScale += new Vector3(2, 2, 2) * Time.deltaTime; // localScale은 물체가 가지는 크기를 의미함
+        }
     }
 }
